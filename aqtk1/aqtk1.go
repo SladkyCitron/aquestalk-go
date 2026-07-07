@@ -1,4 +1,4 @@
-// Package aqtk1 provides a Go SDK for AquesTalk1.
+// Package aqtk1 provides Go bindings for AquesTalk1.
 package aqtk1
 
 import (
@@ -33,27 +33,30 @@ func New(path string) (*AquesTalk, error) {
 	return aq, nil
 }
 
+// Synthe synthesizes speech from the given phonetic string (koe) at the specified speed.
+// It returns the synthesized speech as a byte slice in WAV format or an error if the synthesis fails.
 func (aq *AquesTalk) Synthe(koe string, speed int) ([]byte, error) {
 	var size int32
 	wavPtr := aq._AquesTalk_Synthe_Utf8(koe, int32(speed), &size)
 	if wavPtr == nil {
 		return nil, Errno(size)
 	}
+	defer aq._AquesTalk_FreeWave(wavPtr)
 
 	wavBytes := unsafe.Slice(wavPtr, size)
 	newWavBytes := make([]byte, size)
 	copy(newWavBytes, wavBytes)
 
-	aq._AquesTalk_FreeWave(wavPtr)
-
 	return newWavBytes, nil
 }
 
+// SetDevKey sets the developer key.
 func (aq *AquesTalk) SetDevKey(key string) (ok bool) {
 	ret := aq._AquesTalk_SetDevKey(key)
 	return ret == 0
 }
 
+// SetUsrKey sets the user key.
 func (aq *AquesTalk) SetUsrKey(key string) (ok bool) {
 	ret := aq._AquesTalk_SetUsrKey(key)
 	return ret == 0
