@@ -17,5 +17,13 @@ jobs:
       with:
         go-version-file: "go.mod"
     
+    - name: Install Dependencies
+      run: |
+        sudo apt update
+        sudo apt install gcc libasound2-dev pkg-config -y
+
+        go mod tidy
+        go mod download
+    
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v9
