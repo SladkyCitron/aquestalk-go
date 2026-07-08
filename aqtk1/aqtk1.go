@@ -8,7 +8,7 @@ import (
 	"github.com/ebitengine/purego"
 )
 
-// AquesTalk represents the AquesTalk library and provides methods to interact with it.
+// AquesTalk represents the AquesTalk1 library and provides methods to interact with it.
 type AquesTalk struct {
 	_AquesTalk_Synthe_Utf8 func(koe string, speed int32, size *int32) *byte
 	_AquesTalk_FreeWave    func(wav *byte)
