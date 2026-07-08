@@ -2,6 +2,7 @@ package aqtk1
 
 import "fmt"
 
+// Errno represents an error code.
 type Errno int32
 
 func (e Errno) Error() string {
@@ -19,7 +20,7 @@ func (e Errno) message() string {
 	case 106:
 		return "incorrect tag specification in the input string"
 	case 107:
-		return "tag length exceeds the limit (or closing bracket [>] is missing)"
+		return "tag length exceeds the limit (or closing '>' bracket is missing)"
 	case 108:
 		return "invalid value specified inside the tag"
 	case 200, 202, 204:
