@@ -57,7 +57,7 @@ Complete code examples can be found in the [example/](example/) directory.
 
 ## 📚 Documentation
 
-All documentation is available at [pkg.go.dev/github.com/SladkyCitron/aquestalk-go](https://pkg.go.dev/github.com/SladkyCitron/aquestalk-go).
+All documentation is available at [pkg.go.dev](https://pkg.go.dev/github.com/SladkyCitron/aquestalk-go).
 
 ## ⚖️ License
 
