@@ -23,8 +23,8 @@ func New(path string) (*AquesTalk, error) {
 
 	aq := &AquesTalk{}
 
-	purego.RegisterLibFunc(&aq._AquesTalk_Synthe_Utf8, h, "AquesTalk_Synthe_Utf8")
-	purego.RegisterLibFunc(&aq._AquesTalk_FreeWave, h, "AquesTalk_FreeWave")
+	purego.RegisterLibFunc(&aq._AquesTalk_Synthe_Utf8, h, "AquesTalk2_Synthe_Utf8")
+	purego.RegisterLibFunc(&aq._AquesTalk_FreeWave, h, "AquesTalk2_FreeWave")
 
 	return aq, nil
 }
