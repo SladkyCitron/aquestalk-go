@@ -22,7 +22,7 @@ func (e Errno) message() string {
 	case 104:
 		return "internal error (undefined delimiter code detected)"
 	case 106:
-		return "incorrect tag specification in the input string"
+		return "invalid tag specification in the input string"
 	case 107:
 		return "tag length exceeds the limit (or closing '>' bracket is missing)"
 	case 108:
