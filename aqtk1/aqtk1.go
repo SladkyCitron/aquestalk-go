@@ -50,13 +50,13 @@ func (aq *AquesTalk) Synthe(koe string, speed int) ([]byte, error) {
 	return newWavBytes, nil
 }
 
-// SetDevKey sets the developer key.
+// SetDevKey sets the development license key.
 func (aq *AquesTalk) SetDevKey(key string) (ok bool) {
 	ret := aq._AquesTalk_SetDevKey(key)
 	return ret == 0
 }
 
-// SetUsrKey sets the user key.
+// SetUsrKey sets the user license key.
 func (aq *AquesTalk) SetUsrKey(key string) (ok bool) {
 	ret := aq._AquesTalk_SetUsrKey(key)
 	return ret == 0
