@@ -6,7 +6,7 @@
 
 ## ✨ Features
 
-* Pure Go bindings, no cgo required
+* Pure Go bindings using [purego](https://github.com/ebitengine/purego), no cgo required
 * Dynamic library loading
 * Support for:
   * AquesTalk1
@@ -55,7 +55,7 @@ func main() {
 
 Complete code examples can be found in the [example/](example/) directory.
 
-## 📚 Documentation
+## 📖 Documentation
 
 All documentation is available at [pkg.go.dev](https://pkg.go.dev/github.com/SladkyCitron/aquestalk-go).
 
@@ -64,3 +64,14 @@ All documentation is available at [pkg.go.dev](https://pkg.go.dev/github.com/Sla
 Copyright © 2026 SladkyCitron
 
 Licensed under the **MIT License** (see [LICENSE](LICENSE)) - free to use, fork, remix, and share!
+
+### ⚠️ Licensing Notice
+
+This project only provides bindings. It does not include AquesTalk binaries.
+You are responsible for obtaining the appropriate licenses from AQUEST.
+
+## ❤️ Acknowledgements
+
+* [AQUEST](https://www.a-quest.com/) for creating AquesTalk
+* [purego](https://github.com/ebitengine/purego) for making pure Go bindings possible
+* [Defoko](https://utaneuta.utau-synth.com/) (whose voice was originally generated using AquesTalk1) for inspiring this project 💜
